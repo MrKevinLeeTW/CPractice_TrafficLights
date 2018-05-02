@@ -1,0 +1,2 @@
+# CPractice_TrafficLights
+今天來用C來寫個紅綠燈好了
