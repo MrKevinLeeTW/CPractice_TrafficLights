@@ -7,7 +7,7 @@ int main()
 
 
 
-//按 "關閉:0" 再按一次 Enter 會關閉程式 
+//連續倒數迴圈修正 
  
 { 
  while(1)   //持續迴圈
@@ -37,14 +37,14 @@ int main()
 			{		
 				case '1':	//連續 
 				{	
-					printf("\n\n\n");
-					while(1)   	
-					reciprocal();	
+					printf("\n\n\n");   	
+					reciprocal_while();	
 				}
 				break;
 				
 				case '2':	//重選
 				break;
+				
 				case '0':	//不連續 
 				{	
 					printf("\n\n\n");
@@ -93,5 +93,44 @@ void reciprocal(void)		//reciprocal倒數
 	printf("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
 	Sleep(500);  //程式短暫停留
 	}				 	
+}
+
+	void reciprocal_while(void)		//reciprocal_while連續倒數 
+{	
+	int i,z,x;
+	int a;					//綠燈秒數
+	int b;					//紅燈秒數
+	
+	printf("\n綠燈秒數:");					
+	scanf(" %d",&a);		// 輸入綠燈秒數 
+	printf("紅燈秒數:");				
+	scanf(" %d",&b);		//輸入紅燈秒數
+	
+	while(1)
+	{	
+		for( i=a;i>3;i--)
+		{
+		printf("綠燈	:%02d",i);							
+		Sleep(500);  //程式短暫停留
+		printf("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
+		Sleep(500);  //程式短暫停留
+		}
+	
+		for( z=i;z>0;z--)
+		{	
+		printf("黃燈	:%02d",z);
+		Sleep(500);  //程式短暫停留
+		printf("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
+		Sleep(500);  //程式短暫停留
+		}
+			
+		for( x=b;x>=0;x--)
+		{		
+		printf("紅燈	:%02d",x);
+		Sleep(500);  //程式短暫停留
+		printf("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
+		Sleep(500);  //程式短暫停留
+		}
+	}					 	
 }
 
