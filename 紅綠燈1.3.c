@@ -1,10 +1,13 @@
 #include <stdio.h>
-#include <stdlib.h> 
+#include <stdlib.h>   
 int main()
 
 
-//判斷+判斷是否連續倒數 
+
+//程式迴圈+ 重選開啟或關閉 
  
+ { 
+ while(1)   //持續迴圈
 {
 	int a;					//綠燈秒數
 	int b;					//紅燈秒數
@@ -21,7 +24,7 @@ int main()
 		break;					//0結尾 
 						
 		default:				// 其他 
-		printf("錯誤\n");
+		printf("\n錯誤\n\n");
 		break;					//其他結尾
 						
 		case '1':	//啟動秒數倒數 
@@ -32,7 +35,7 @@ int main()
 			scanf(" %d",&b);		//輸入紅燈秒數
 						
 			char o;		//要不要連續
-			printf("\n連續:1   不連續:0    :");
+			printf("\n不連續:0   連續:1   重選開關:2   :");
 			scanf(" %c",&o);
 					
 			switch(o)		//判斷要不要連續 
@@ -69,6 +72,9 @@ int main()
 					}
 				}
 				break;
+				
+				case '2':	//重選
+				break;
 				case '0':	//不連續 
 				{	
 					printf("\n\n\n");
@@ -89,7 +95,7 @@ int main()
 							Sleep(500);  //程式短暫停留
 						}
 		
-						for( x=b;x>0;x--)
+						for( x=b;x>=0;x--)
 						{		
 							printf("紅燈	:%02d",x);
 							Sleep(500);  //程式短暫停留
@@ -103,7 +109,8 @@ int main()
 			printf("\n\n");				
 		}
 	}	
-
+} 
 system("pause");
 return 0;
 }
+
