@@ -7,7 +7,7 @@ int main()
 
 
 
-//程式迴圈+ 重選開啟或關閉 (程式縮短/替換)
+//按 "關閉:0" 再按一次 Enter 會關閉程式 
  
 { 
  while(1)   //持續迴圈
@@ -15,12 +15,12 @@ int main()
 	char p;					// 開關
 	printf("開啟:1   關閉:0      :");
 	scanf(" %c",&p);
-	
+
 	//判斷開關 
 	switch(p)
 	{
 		case '0':		//不啟動 					
-		printf("\n請開啟\n\n");
+		exit(0);
 		break;					//0結尾 
 						
 		default:				// 其他 
@@ -38,8 +38,8 @@ int main()
 				case '1':	//連續 
 				{	
 					printf("\n\n\n");
-					while(1)   //持續迴圈		 	
-					reciprocal();
+					while(1)   	
+					reciprocal();	
 				}
 				break;
 				
